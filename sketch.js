@@ -8,6 +8,16 @@ var database;
 
 var form, player, game;
 
+var canvas, backgroundImage;
+
+var gameState = 0;
+var playerCount;
+var allPlayers;
+var distance = 0;
+var database;
+
+var form, player, game;
+
 var cars, car1, car2, car3, car4;
 
 var track, car1_img, car2_img, car3_img, car4_img;
@@ -39,6 +49,17 @@ function draw(){
     game.play();
   }
   if(gameState === 2){
-    game.end();
+   // game.end();
+
+   //console.log("Gamestate is 2 and rank is 1")
+   
   }
+  if(gameState == 3){
+    //console.log("Gamestate is 3 and rank is 2")
+  }
+  if(gameState == 4){
+    //console.log("Gamestate is 4 and rank is 3 and the game ends")
+  }
+
+  console.log(gameState)
 }
