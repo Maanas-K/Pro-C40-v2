@@ -92,8 +92,17 @@ class Game {
       player.update();
     }
 
-    if(player.distance > 3860){
+    if(player.distance > 3860 && gameState == 1){
       gameState = 2;
+      game.update(2);
+    }
+    else   if(player.distance > 3860 && gameState == 2){
+      gameState = 3;
+      game.update(3);
+    }
+    else  if(player.distance > 3860 && gameState == 3){
+      gameState = 4;
+      game.update(4);
     }
    
     drawSprites();
